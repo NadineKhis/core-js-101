@@ -23,8 +23,9 @@
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.asin(x))
  *
  */
-function getComposition(f, g) {
-  return (x) => f(g(x));
+function getComposition(/* f, g */) {
+  // return (x) => f(g(x));
+  throw new Error('Not implemented');
 }
 
 
@@ -44,8 +45,9 @@ function getComposition(f, g) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(exponent) {
-  return (x) => x ** exponent;
+function getPowerFunction(/* exponent */) {
+  // return (x) => x ** exponent;
+  throw new Error('Not implemented');
 }
 
 
@@ -62,14 +64,15 @@ function getPowerFunction(exponent) {
  *   getPolynom(8)     => y = 8
  *   getPolynom()      => null
  */
-function getPolynom(...args) {
-  return (x) => {
-    let pol = 0;
-    for (let i = 0; i < args.length; i += 1) {
-      pol += args[args.length - i - 1] * x ** i;
-    }
-    return pol;
-  };
+function getPolynom(/* ...args */) {
+  // return (x) => {
+  //   let pol = 0;
+  //   for (let i = 0; i < args.length; i += 1) {
+  //     pol += args[args.length - i - 1] * x ** i;
+  //   }
+  //   return pol;
+  // };
+  throw new Error('Not implemented');
 }
 
 
@@ -87,9 +90,10 @@ function getPolynom(...args) {
  *   ...
  *   memoizer() => the same random number  (next run, returns the previous cached result)
  */
-function memoize(func) {
-  const result = func();
-  return () => result;
+function memoize(/* func */) {
+  // const result = func();
+  // return () => result;
+  throw new Error('Not implemented');
 }
 
 
@@ -108,17 +112,18 @@ function memoize(func) {
  * }, 2);
  * retryer() => 2
  */
-function retry(func, attempts) {
-  return () => {
-    for (let i = 0; i <= attempts; i += 1) {
-      try {
-        return func();
-      } catch (e) {
-        //  do nothing
-      }
-    }
-    return null;
-  };
+function retry(/* func, attempts */) {
+  // return () => {
+  //   for (let i = 0; i <= attempts; i += 1) {
+  //     try {
+  //       return func();
+  //     } catch (e) {
+  //       //  do nothing
+  //     }
+  //   }
+  //   return null;
+  // };
+  throw new Error('Not implemented');
 }
 
 
